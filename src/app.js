@@ -1,8 +1,12 @@
 import express from "express";
-import usersRouter from "./users/users.js";
+import usersRouter from "./routes/users/users.js";
 import requestLogger from "./middleware/requestLogger.js";
-
+import connectToDatabase from "./utils/helper/database.js";
 const app = express();//initializing express
+
+
+//connecting to database
+connectToDatabase();
 
 //middlewares
 app.use(express.json()); //middleware to parse json
@@ -14,4 +18,4 @@ app.get("/", (req, res) => res.send("Welcome to Backend Assignment"));//routes t
 
 
 //listening
-app.listen(3300, () => console.log("Server is running on port 3300"));
+app.listen(3300, () => console.log("Server is running at \x1b[31m http://localhost:3300 \x1b[0m"));

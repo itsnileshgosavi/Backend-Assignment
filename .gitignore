@@ -1,2 +1,32 @@
-/node_modules
-Backend assignment tests.pdf
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Dependency directories
+node_modules/
+
+# Environment variables
+.env
+
+# Build outputs
+dist/
+build/
+
+# Debugger
+.vscode/
+.idea/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Optional: Ignore coverage files
+coverage/
+
+# Other
+*.pdf
+
+
